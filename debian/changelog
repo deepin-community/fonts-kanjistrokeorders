@@ -1,0 +1,332 @@
+fonts-kanjistrokeorders (4.003~dfsg-1) unstable; urgency=medium
+
+  * New upstream version 4.003~dfsg
+  * Trim trailing whitespace.
+  * Fix field name case in debian/copyright (Upstream-contact =>
+    Upstream-Contact).
+  * debian/control
+    - Update standards version to 4.5.0, no changes needed.
+  * - Drop debhelper and set debhelper-compat (= 13)
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 16 May 2020 18:15:55 +0900
+
+fonts-kanjistrokeorders (4.002~dfsg-3) unstable; urgency=medium
+
+  * drop debian/watch since upstream provides source at Google Drive
+  * debian/salsa-ci.yml: disable unnecessary tests
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 01 Sep 2019 22:26:59 +0900
+
+fonts-kanjistrokeorders (4.002~dfsg-2) unstable; urgency=medium
+
+  * debian/control
+    - Update maintaianer address
+    - update Homepage to use https
+    - uset Standards-Version: 4.4.0
+    - use dh12
+    - add Rules-Requires-Root: no
+  * debian/watch
+    - use https for upstream site check
+  * debian/copyright
+    - update upstream URL to use https
+    - update copyright year
+  * add debian/salsa-ci.yml to exec CI on salsa.debian.org
+
+ -- Hideki Yamane <henrich@debian.org>  Mon, 12 Aug 2019 20:13:44 +0900
+
+fonts-kanjistrokeorders (4.002~dfsg-1) unstable; urgency=medium
+
+  * New upstream version 4.002~dfsg
+  * debian/control
+    - Update Vcs-* to move to salsa.debian.org
+    - Set Standards-Version: 4.2.1
+    - Update Build-Depends
+  * debian/rules
+    - remove override_dh_builddeb, use default compression
+  * debian/copyright
+    - update copyright fomart to use https
+    - update copyright year
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 22 Dec 2018 12:04:24 +0900
+
+fonts-kanjistrokeorders (4.001~dfsg-2) unstable; urgency=medium
+
+  * debian/control
+    - set Build-Depends: debhelper (>= 10)
+    - Standards-Version: 4.0.0
+  * debian/compat
+    - set 10
+  * debian/source/lintian-overrides
+    - ignore "file-without-copyright-information copyright.txt", copyright
+      information is in it, ironically...
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 22 Jul 2017 14:51:28 +0900
+
+fonts-kanjistrokeorders (4.001~dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/watch
+    - update to deal with upstream's change
+  * debian/control
+    - Standards-Version: 3.9.8
+    - update Vcs-*
+    - update Homepage
+  * update debian/copyright
+  * drop fonts-kanjistrokeorders.preinst since defoma was removed long time ago
+
+ -- Hideki Yamane <henrich@debian.org>  Mon, 26 Sep 2016 06:09:09 +0900
+
+fonts-kanjistrokeorders (3.001~dfsg-2) unstable; urgency=medium
+
+  * debian/watch
+    - update to ignore false positive update
+
+ -- Hideki Yamane <henrich@debian.org>  Mon, 09 Jun 2014 07:06:21 +0900
+
+fonts-kanjistrokeorders (3.001~dfsg-1) unstable; urgency=medium
+
+  * New upstream release
+  * debian/watch
+    - update to deal with upstream's change
+  * debian/control
+    - Standards-Version: 3.9.5
+
+ -- Hideki Yamane <henrich@debian.org>  Thu, 20 Mar 2014 11:44:07 +0900
+
+fonts-kanjistrokeorders (3.000-dfsg-4) unstable; urgency=low
+
+  * debian/control
+    - drop obsolete ttf- package
+    - use canonical URL for Vcs-*
+
+ -- Hideki Yamane <henrich@debian.org>  Sun, 16 Jun 2013 04:05:44 +0900
+
+fonts-kanjistrokeorders (3.000-dfsg-3) unstable; urgency=low
+
+  * debian/control
+    - set Standards-Version: 3.9.4
+    - update Vcs-* field, moved from svn to git
+    - make it "Multi-Arch: foreign"
+
+ -- Hideki Yamane <henrich@debian.org>  Tue, 04 Jun 2013 17:48:38 +0900
+
+fonts-kanjistrokeorders (3.000-dfsg-2) unstable; urgency=low
+
+  * debian/rules
+    - add xz option
+  * debian/control
+    - add "Pre-Depends: dpkg (>= 1.15.6~)"
+    - bump up debhelper version to deal with xz option
+    - replace s/Conflicts/Breaks/ to more Policy polite.
+  * debian/compat
+    - set 9
+  * debian/copyright
+    - update to copyright-format 1.0
+  * debian/fonts-kanjistrokeorders.lintian-overrides
+    - use it instead of install file
+    - override "no-upstream-changelog" warning because readme_en_v*.txt
+      contains it.
+    - remove "possible-documentation-but-no-doc-base-registration" override
+
+ -- Hideki Yamane <henrich@debian.org>  Tue, 12 Jun 2012 19:59:33 +0900
+
+fonts-kanjistrokeorders (3.000-dfsg-1) unstable; urgency=low
+
+  * New upstream release
+    - about 20 corrections and over 100 new kanji, primarily to cover the
+      Jinmeiyō characters
+  * debian/watch
+    - update URI to deal with upstream's change
+  * debian/copyright
+    - update upstream URL
+  * remove PDF without source (Closes: #664054)
+  * debian/fonts-kanjistrokeorders.examples
+    - remove it since files are removed from upstream source
+  * debian/rules
+    - compress with xz
+
+ -- Hideki Yamane <henrich@debian.org>  Tue, 29 May 2012 08:14:25 +0900
+
+fonts-kanjistrokeorders (2.016-4) unstable; urgency=low
+
+  * debian/control
+    - set "Standards-Version: 3.9.3"
+    - add "Priority: extra" to transitional package
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 10 Mar 2012 04:30:36 +0900
+
+fonts-kanjistrokeorders (2.016-3) unstable; urgency=low
+
+  * debian/copyright
+    - fix "syntax-error-in-dep5-copyright" lintian warning
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 17 Sep 2011 14:16:30 +0900
+
+fonts-kanjistrokeorders (2.016-2) unstable; urgency=low
+
+  * debian/control
+    - introduce ttf-kanjistrokeorders as transitional dummy package
+    - specify version for Conflicts: and Replaces: and drop Provides:
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 30 Jul 2011 17:44:56 +0200
+
+fonts-kanjistrokeorders (2.016-1) unstable; urgency=low
+
+  * New upstream release
+  * New package name, and adjust some file/directory name
+  * debian/control
+    - set "Standards-Version: 3.9.2"
+    - add Vcs-* fields.
+
+ -- Hideki Yamane <henrich@debian.org>  Mon, 18 Jul 2011 22:30:17 +0900
+
+ttf-kanjistrokeorders (2.015-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control
+    - set "Standards-Version: 3.9.1" with no further changes
+
+ -- Hideki Yamane <henrich@debian.org>  Wed, 06 Oct 2010 23:23:36 +0900
+
+ttf-kanjistrokeorders (2.014-3) unstable; urgency=low
+
+  [ Christian Perrier ]
+  * Drop x-ttcidfont-conf, fontconfig et al. from Suggests
+
+  [ Hideki Yamane ]
+  * debian/control
+    - update my address
+    - Bump up to "Standards-Version: 3.9.0"
+  * debian/copyright
+    - fix "copyright-refers-to-deprecated-bsd-license-file", describe license
+     itself to this file.
+
+ -- Hideki Yamane <henrich@debian.org>  Sat, 03 Jul 2010 23:50:42 +0900
+
+ttf-kanjistrokeorders (2.014-2) unstable; urgency=low
+
+  * use debhelper7
+  * switch to source format 3.0 (quilt)
+  * drop defoma
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Sat, 12 Dec 2009 17:49:58 +0900
+
+ttf-kanjistrokeorders (2.014-1) unstable; urgency=low
+
+  * New upstream release
+   - Added missing stroke order numbers to U+30EE, U+4EDD, U+9FA0
+  * debian/copyright:
+    - convert to "Machine-readable debian/copyright"
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Tue, 06 Oct 2009 08:15:08 +0900
+
+ttf-kanjistrokeorders (2.013-2) unstable; urgency=low
+
+  * debian/lintian/ttf-kanjistrokeorders
+    - fix it.
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Tue, 01 Sep 2009 09:18:15 +0900
+
+ttf-kanjistrokeorders (2.013-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/control:
+    - set "Standards-Version: 3.8.3"
+  * debian/lintian/ttf-kanjistrokeorders
+    - ignore "possible-documentation-but-no-doc-base-registration", because it's
+      not a documentation but a sample.
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Mon, 31 Aug 2009 01:42:42 +0900
+
+ttf-kanjistrokeorders (2.012-6) unstable; urgency=low
+
+  * rebuild to build postinst and prerm scripts correctly.
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Thu, 25 Jun 2009 20:16:26 +0900
+
+ttf-kanjistrokeorders (2.012-5) unstable; urgency=low
+
+  * debian/{postinst,prerm}:
+    - add again, and remove fc-cache call from them
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Sun, 21 Jun 2009 01:11:45 +0900
+
+ttf-kanjistrokeorders (2.012-4) unstable; urgency=low
+
+  * debian/{postinst,prerm}:
+    - remove it
+  * debian/control:
+    - set "Standards-Version: 3.8.2"
+    - "Suggests: fontconfig (>= 2.6.0-4)"
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Sat, 20 Jun 2009 18:54:49 +0900
+
+ttf-kanjistrokeorders (2.012-3) unstable; urgency=low
+
+  * debian/control:
+    - new section "fonts"
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Wed, 25 Mar 2009 07:15:49 +0900
+
+ttf-kanjistrokeorders (2.012-2) unstable; urgency=low
+
+  * debian/copyright
+    - fix "copyright-with-old-dh-make-debian-copyright"
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Sun, 22 Feb 2009 03:39:21 +0900
+
+ttf-kanjistrokeorders (2.012-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Tue, 30 Dec 2008 23:31:42 +0900
+
+ttf-kanjistrokeorders (2.011-3) unstable; urgency=low
+
+  * debian/watch
+    - update with previous change.
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Tue, 30 Dec 2008 23:24:44 +0900
+
+ttf-kanjistrokeorders (2.011-2) unstable; urgency=low
+
+  * debian/control
+    - update upstream homepage.
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Sat, 27 Dec 2008 23:41:49 +0900
+
+ttf-kanjistrokeorders (2.011-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Thu, 02 Oct 2008 08:08:25 +0900
+
+ttf-kanjistrokeorders (2.010-3) unstable; urgency=low
+
+  * debian/watch
+   - update watch file.
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Thu, 02 Oct 2008 07:47:44 +0900
+
+ttf-kanjistrokeorders (2.010-2) unstable; urgency=low
+
+  * debian/watch
+    - update watch file.
+  * debian/{prerm,postinst}
+    - fix lintian warning (path issue).
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Mon, 08 Sep 2008 21:02:48 +0900
+
+ttf-kanjistrokeorders (2.010-1) unstable; urgency=low
+
+  * New upstream release (Closes: #491863)
+  * debian/control
+    - set Priority: optional
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Fri, 25 Jul 2008 20:39:22 +0900
+
+ttf-kanjistrokeorders (2.009-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Hideki Yamane (Debian-JP) <henrich@debian.or.jp>  Wed, 23 Jul 2008 00:02:04 +0900

@@ -1,0 +1,27 @@
+Source: fonts-kanjistrokeorders
+Section: fonts
+Priority: optional
+Maintainer: Debian Fonts Task Force <debian-fonts@lists.debian.org>
+Uploaders: Hideki Yamane <henrich@debian.org>
+Build-Depends: debhelper-compat (= 13),
+Standards-Version: 4.5.0
+Homepage: https://www.nihilist.org.uk/
+Vcs-Git: https://salsa.debian.org/fonts-team/fonts-kanjistrokeorders.git
+Vcs-Browser: https://salsa.debian.org/fonts-team/fonts-kanjistrokeorders
+Rules-Requires-Root: no
+
+Package: fonts-kanjistrokeorders
+Architecture: all
+Multi-Arch: foreign
+Pre-Depends: dpkg (>= 1.15.6~), ${misc:Pre-Depends}
+Depends: ${misc:Depends}
+Breaks: ttf-kanjistrokeorders (<< 2.016-1)
+Replaces: ttf-kanjistrokeorders (<< 2.016-1)
+Description: font to view stroke order diagrams for Kanji, Kana and etc
+ This font will assist people who are learning kanji, and will help teachers
+ of Japanese in the preparation of classroom material.
+ .
+ In the parts of your document where you want the kanji to be annotated with
+ stroke order numbers simply set your document's font to KanjiStrokeOrders.
+ You will need to set the size of the font to be large to allow the stroke
+ order numbers to show up: 100pt seems to be the minimum usable size.
